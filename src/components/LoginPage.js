@@ -10,8 +10,10 @@ const LoginForm = (props) => {
   const [password, setPassword] = useState("");
 
   return (
-    <div className={` ${styles.container} ${props.darkMode ? "dark-mode" : ""} `}>
-      <div className={ styles.header }>Login</div>
+    <div
+      className={` ${styles.container} ${props.darkMode ? "dark-mode" : ""} `}
+    >
+      <div className={styles.header}>Login</div>
       <div className={styles.form}>
         <div className={styles["form-group"]}>
           <label htmlFor="username">Username</label>
@@ -41,7 +43,9 @@ const LoginForm = (props) => {
       <div className={styles.footer}>
         <button
           type="button"
-          className={` btn ${props.darkMode ? styles["dark-mode-btn"] : ""} }`}
+          className={` ${styles.btn} ${
+            props.darkMode ? styles["dark-mode-btn"] : ""
+          } }`}
           onClick={onSubmit}
         >
           Login
